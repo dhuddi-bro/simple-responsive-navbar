@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Responsive - Dhuddi Bro</title>
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="logo">Dev.</div>
+        <li class="item">
+            <a href="#" class="link">Home</a>
+            <a href="#" class="link">Products</a>
+            <a href="#" class="link">Serivces we offer</a>
+            <a href="#" class="link">Latest Articles</a>
+        </li>
+        <div class="bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+
+    <script>
+        let bar = document.querySelector('.bars');
+        let menu = document.querySelector('.item');
+
+        bar.addEventListener('click', ()=>{
+            menu.classList.toggle('active')
+        })
+
+        document.querySelectorAll('.link').forEach (n=> n.addEventListener('click', ()=>{
+            menu.classList.remove('active')
+        }))
+    </script>
+</body>
+</html>
